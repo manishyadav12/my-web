@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+
+{% block title %}{{ post.title }} - Manish Yadav{% endblock %}
+
+{% block content %}
+<article class="blog-post-detail">
+    <div class="container">
+        <header class="post-header">
+            <div class="post-breadcrumb">
+                <a href="{{ url_for('blog') }}" class="breadcrumb-link">
+                    <i class="fas fa-arrow-left"></i> Back to Blog
+                </a>
+            </div>
+            <h1 class="post-title">{{ post.title }}</h1>
+            <div class="post-meta">
+                <div class="meta-item">
+                    <i class="fas fa-calendar"></i>
+                    <span>{{ post.date_posted.strftime('%B %d, %Y at %I:%M %p') }}</span>
+                </div>
+                <div class="meta-item">
+                    <i class="fas fa-clock"></i>
+                    <span>{{ (post.content.split()|length / 200)|round|int }} min read</span>
+                </div>
+            </div>
+        </header>
+
+        <div class="post-content">
+            {{ post.content|replace('\n', '<br>')|safe }}
+        </div>
+
+        <footer class="post-footer">
+            <div class="post-actions">
+                <a href="{{ url_for('blog') }}" class="btn btn-secondary">
+                    <i class="fas fa-list"></i> All Posts
+                </a>
+                <a href="{{ url_for('new_blog_post') }}" class="btn btn-primary">
+                    <i class="fas fa-plus"></i> New Post
+                </a>
+            </div>
+        </footer>
+    </div>
+</article>
+
+<section class="related-topics">
+    <div class="container">
+        <h2>Explore More Topics</h2>
+        <div class="topic-links">
+            <a href="{{ url_for('blog') }}" class="topic-link">All Posts</a>
+            <a href="{{ url_for('experience') }}" class="topic-link">My Experience</a>
+            <a href="{{ url_for('projects') }}" class="topic-link">Projects</a>
+            <a href="{{ url_for('contact') }}" class="topic-link">Get in Touch</a>
+        </div>
+    </div>
+</section>
+{% endblock %}

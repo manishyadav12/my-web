@@ -1,0 +1,154 @@
+{% extends "base.html" %}
+
+{% block title %}Experience - Manish Yadav{% endblock %}
+
+{% block content %}
+<section class="page-header">
+    <div class="container">
+        <h1 class="page-title">Professional Experience</h1>
+        <p class="page-subtitle">My journey in DevOps and Cloud Engineering</p>
+    </div>
+</section>
+
+<section class="experience-timeline">
+    <div class="container">
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                    <div class="timeline-header">
+                        <h3>DevOps Engineer</h3>
+                        <div class="timeline-meta">
+                            <span class="company">CSG International</span>
+                            <span class="location">Bangalore, India</span>
+                            <span class="duration">Nov 2024 - Present</span>
+                        </div>
+                    </div>
+                    <div class="timeline-description">
+                        <ul>
+                            <li>Successfully migrated production infrastructure from AWS Elastic Beanstalk to Kubernetes (EKS) and upgraded Dev and QA to EKS clusters from version 1.25 to 1.29 with zero-rotation, streamlining deployment processes and reducing release times by 75% while ensuring zero downtime during upgrades.</li>
+                            <li>Built the production environment on Kubernetes by setting up an EKS cluster, provisioning EC2 instances, RDS, S3 buckets using Terraform, improving system performance by 40%.</li>
+                            <li>Created and integrated a GitLab pipeline for infrastructure repositories, automating validation, plan, and apply stages, which reduced Infrastructure deployment errors by 35% and improved CI speed by 45%.</li>
+                            <li>Set up the eu-central-1 (Frankfurt) environment using Terraform for clients Telenor and Lyse, reducing operational bandwidth by 21% and saving approximately $2.5 million in revenue for the organization.</li>
+                            <li>Managed server monitoring and troubleshooting using AWS services (EC2, S3, CloudWatch, VPC, IAM) and Prometheus-Grafana stack, improving server uptime and incident response time by 30%.</li>
+                            <li>Developed a cost-optimization solution using Python and AWS Lambda, enabling scheduled start/stop of non-prod servers, reducing AWS costs by 30%.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                    <div class="timeline-header">
+                        <h3>DevOps Engineer Intern</h3>
+                        <div class="timeline-meta">
+                            <span class="company">CSG International</span>
+                            <span class="location">Bangalore, India</span>
+                            <span class="duration">Mar 2024 - Nov 2024</span>
+                        </div>
+                    </div>
+                    <div class="timeline-description">
+                        <ul>
+                            <li>Deployed the latest versions of the product, incorporating new microservices and necessary infrastructure, reducing deployment time by 22%.</li>
+                            <li>Added and verified environment variables to optimize the QA environment, improving efficiency by 17% and ensuring smoother deployments and testing workflows.</li>
+                            <li>Enhanced AWS resource monitoring, ensuring optimized instance performance, achieving a 4.5% reduction in infrastructure costs.</li>
+                            <li>Designed scalable infrastructure for multiple application environments using AWS services and Terraform, offering automation, reliability, and efficient resource management, resulting in a 90% reduction in deployment time and a 25% decrease in operational costs.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="achievements">
+    <div class="container">
+        <h2>Key Achievements</h2>
+        <div class="achievements-grid">
+            <div class="achievement-card">
+                <div class="achievement-icon">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <div class="achievement-content">
+                    <h3>75% Faster Deployments</h3>
+                    <p>Reduced deployment times by migrating from Elastic Beanstalk to Kubernetes with zero downtime</p>
+                </div>
+            </div>
+            <div class="achievement-card">
+                <div class="achievement-icon">
+                    <i class="fas fa-dollar-sign"></i>
+                </div>
+                <div class="achievement-content">
+                    <h3>$2.5M Revenue Saved</h3>
+                    <p>Set up EU infrastructure reducing operational costs and generating significant savings</p>
+                </div>
+            </div>
+            <div class="achievement-card">
+                <div class="achievement-icon">
+                    <i class="fas fa-cog"></i>
+                </div>
+                <div class="achievement-content">
+                    <h3>45% Faster CI/CD</h3>
+                    <p>Improved CI speed through GitLab pipeline optimization and automation</p>
+                </div>
+            </div>
+            <div class="achievement-card">
+                <div class="achievement-icon">
+                    <i class="fas fa-server"></i>
+                </div>
+                <div class="achievement-content">
+                    <h3>30% Better Uptime</h3>
+                    <p>Enhanced monitoring and incident response using AWS and Prometheus-Grafana stack</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="technologies-used">
+    <div class="container">
+        <h2>Technologies & Tools Used</h2>
+        <div class="tech-categories">
+            <div class="tech-category">
+                <h4>Cloud Platforms</h4>
+                <div class="tech-items">
+                    <span class="tech-item">AWS (EC2, EKS, S3, RDS, CloudWatch, VPC, IAM)</span>
+                    <span class="tech-item">Azure</span>
+                </div>
+            </div>
+            <div class="tech-category">
+                <h4>Infrastructure as Code</h4>
+                <div class="tech-items">
+                    <span class="tech-item">Terraform</span>
+                    <span class="tech-item">Terragrunt</span>
+                </div>
+            </div>
+            <div class="tech-category">
+                <h4>Containerization & Orchestration</h4>
+                <div class="tech-items">
+                    <span class="tech-item">Docker</span>
+                    <span class="tech-item">Kubernetes</span>
+                    <span class="tech-item">Helm</span>
+                </div>
+            </div>
+            <div class="tech-category">
+                <h4>CI/CD & Version Control</h4>
+                <div class="tech-items">
+                    <span class="tech-item">GitLab</span>
+                    <span class="tech-item">GitHub</span>
+                    <span class="tech-item">Git</span>
+                </div>
+            </div>
+            <div class="tech-category">
+                <h4>Monitoring & Observability</h4>
+                <div class="tech-items">
+                    <span class="tech-item">Prometheus</span>
+                    <span class="tech-item">Grafana</span>
+                    <span class="tech-item">CloudWatch</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
