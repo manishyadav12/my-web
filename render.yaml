@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: portfolio-website
+    env: python
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "gunicorn app:app -c gunicorn.conf.py"
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.10.12
+      - key: FLASK_DEBUG
+        value: False

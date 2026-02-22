@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+
+{% block title %}Manish Yadav - DevOps Engineer & Cloud Specialist{% endblock %}
+
+{% block content %}
+<section class="hero">
+    <div class="hero-content">
+        <div class="hero-text">
+            <h1 class="hero-title">
+                Hi, I'm <span class="highlight">Manish Yadav</span>
+            </h1>
+            <h2 class="hero-subtitle">DevOps Engineer & Cloud Specialist</h2>
+            <p class="hero-description">
+                Passionate DevOps Engineer with expertise in AWS, Kubernetes, Terraform, and CI/CD pipelines. 
+                I specialize in building scalable infrastructure and automating deployment processes to drive 
+                operational efficiency and reduce deployment times.
+            </p>
+            <div class="hero-buttons">
+                <a href="{{ url_for('about') }}" class="btn btn-primary">Learn More</a>
+                <a href="{{ url_for('contact') }}" class="btn btn-secondary">Get In Touch</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <div class="hero-avatar">
+                <i class="fas fa-user-circle"></i>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="highlights">
+    <div class="container">
+        <div class="highlights-grid">
+            <div class="highlight-card">
+                <div class="highlight-icon">
+                    <i class="fas fa-cloud"></i>
+                </div>
+                <h3>Cloud Infrastructure</h3>
+                <p>Expert in AWS and Azure cloud platforms with hands-on experience in designing and implementing scalable infrastructure solutions.</p>
+            </div>
+            <div class="highlight-card">
+                <div class="highlight-icon">
+                    <i class="fas fa-cogs"></i>
+                </div>
+                <h3>DevOps & Automation</h3>
+                <p>Specialized in CI/CD pipelines, infrastructure as code, and automation tools to streamline development workflows.</p>
+            </div>
+            <div class="highlight-card">
+                <div class="highlight-icon">
+                    <i class="fas fa-code"></i>
+                </div>
+                <h3>Development</h3>
+                <p>Proficient in Python, Terraform, and shell scripting with strong problem-solving skills in cloud-native environments.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="quick-stats">
+    <div class="container">
+        <div class="stats-grid">
+            <div class="stat-item">
+                <div class="stat-number">2+</div>
+                <div class="stat-label">Years Experience</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">75%</div>
+                <div class="stat-label">Deployment Time Reduction</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">50%</div>
+                <div class="stat-label">Cost Optimization</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">99.9%</div>
+                <div class="stat-label">Uptime Achieved</div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

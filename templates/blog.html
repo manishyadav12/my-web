@@ -1,0 +1,106 @@
+{% extends "base.html" %}
+
+{% block title %}Blog - Manish Yadav{% endblock %}
+
+{% block content %}
+<section class="page-header">
+    <div class="container">
+        <div class="blog-header">
+            <div class="blog-header-content">
+                <h1 class="page-title">Tech Blog</h1>
+                <p class="page-subtitle">Sharing insights on DevOps, Cloud Infrastructure, and Technology</p>
+            </div>
+            <div class="blog-header-actions">
+                <a href="{{ url_for('new_blog_post') }}" class="btn btn-primary">
+                    <i class="fas fa-plus"></i> New Post
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% if posts %}
+<section class="blog-posts">
+    <div class="container">
+        <div class="posts-grid">
+            {% for post in posts %}
+            <article class="post-card">
+                <div class="post-header">
+                    <h2 class="post-title">
+                        <a href="{{ url_for('blog_post', post_id=post.id) }}">{{ post.title }}</a>
+                    </h2>
+                    <div class="post-meta">
+                        <span class="post-date">
+                            <i class="fas fa-calendar"></i>
+                            {{ post.date_posted.strftime('%B %d, %Y') }}
+                        </span>
+                    </div>
+                </div>
+                <div class="post-content">
+                    <p class="post-excerpt">
+                        {{ post.content[:200] }}{% if post.content|length > 200 %}...{% endif %}
+                    </p>
+                </div>
+                <div class="post-footer">
+                    <a href="{{ url_for('blog_post', post_id=post.id) }}" class="read-more">
+                        Read More <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </article>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% else %}
+<section class="empty-state">
+    <div class="container">
+        <div class="empty-content">
+            <div class="empty-icon">
+                <i class="fas fa-blog"></i>
+            </div>
+            <h2>No Blog Posts Yet</h2>
+            <p>Start sharing your thoughts and insights with the world!</p>
+            <a href="{{ url_for('new_blog_post') }}" class="btn btn-primary">
+                Write Your First Post
+            </a>
+        </div>
+    </div>
+</section>
+{% endif %}
+
+<section class="blog-topics">
+    <div class="container">
+        <h2>Topics I Write About</h2>
+        <div class="topics-grid">
+            <div class="topic-card">
+                <div class="topic-icon">
+                    <i class="fas fa-cloud"></i>
+                </div>
+                <h3>Cloud Architecture</h3>
+                <p>AWS, Azure, best practices, and cloud migration strategies</p>
+            </div>
+            <div class="topic-card">
+                <div class="topic-icon">
+                    <i class="fas fa-cogs"></i>
+                </div>
+                <h3>DevOps Practices</h3>
+                <p>CI/CD, automation, infrastructure as code, and tooling</p>
+            </div>
+            <div class="topic-card">
+                <div class="topic-icon">
+                    <i class="fas fa-ship"></i>
+                </div>
+                <h3>Containerization</h3>
+                <p>Docker, Kubernetes, microservices, and orchestration</p>
+            </div>
+            <div class="topic-card">
+                <div class="topic-icon">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <h3>Performance & Optimization</h3>
+                <p>Cost optimization, monitoring, and system performance</p>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,223 @@
+{% extends "base.html" %}
+
+{% block title %}Projects - Manish Yadav{% endblock %}
+
+{% block content %}
+<section class="page-header">
+    <div class="container">
+        <h1 class="page-title">Featured Projects</h1>
+        <p class="page-subtitle">Showcasing my work in DevOps and Cloud Infrastructure</p>
+    </div>
+</section>
+
+<section class="projects-grid">
+    <div class="container">
+        <div class="projects-container">
+            <div class="project-card">
+                <div class="project-header">
+                    <div class="project-icon">
+                        <i class="fas fa-cloud-upload-alt"></i>
+                    </div>
+                    <div class="project-title">
+                        <h3>Infrastructure as Code Migration</h3>
+                        <div class="project-tech">
+                            <span class="tech-badge">Terraform</span>
+                            <span class="tech-badge">Terragrunt</span>
+                            <span class="tech-badge">AWS</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-description">
+                    <p>
+                        Led a comprehensive infrastructure migration project, refactoring existing infrastructure code 
+                        from Terraform workspaces to Terragrunt for improved reusability, maintainability, and scalability.
+                    </p>
+                    <div class="project-highlights">
+                        <h4>Key Achievements:</h4>
+                        <ul>
+                            <li>Migrated from Terraform workspaces to Terragrunt architecture</li>
+                            <li>Improved code reusability and maintainability</li>
+                            <li>Enhanced infrastructure scalability across multiple environments</li>
+                            <li>Implemented best practices for Infrastructure as Code</li>
+                        </ul>
+                    </div>
+                    <div class="project-impact">
+                        <div class="impact-item">
+                            <span class="impact-label">Code Reusability</span>
+                            <span class="impact-value">+85%</span>
+                        </div>
+                        <div class="impact-item">
+                            <span class="impact-label">Deployment Time</span>
+                            <span class="impact-value">-60%</span>
+                        </div>
+                        <div class="impact-item">
+                            <span class="impact-label">Maintenance Effort</span>
+                            <span class="impact-value">-40%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-header">
+                    <div class="project-icon">
+                        <i class="fas fa-code-branch"></i>
+                    </div>
+                    <div class="project-title">
+                        <h3>Multi-Cloud CI/CD Pipeline</h3>
+                        <div class="project-tech">
+                            <span class="tech-badge">AWS</span>
+                            <span class="tech-badge">Azure</span>
+                            <span class="tech-badge">Git</span>
+                            <span class="tech-badge">GitHub</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-description">
+                    <p>
+                        Developed and optimized a comprehensive CI/CD pipeline leveraging containerization with EKS and AKS 
+                        for web application deployment, integrating AWS CodeBuild for automated source code builds from GitHub.
+                    </p>
+                    <div class="project-highlights">
+                        <h4>Key Features:</h4>
+                        <ul>
+                            <li>Multi-cloud deployment strategy (AWS EKS & Azure AKS)</li>
+                            <li>Automated testing and quality gates</li>
+                            <li>Streamlined automation and deployment processes</li>
+                            <li>Integrated monitoring and alerting systems</li>
+                        </ul>
+                    </div>
+                    <div class="project-impact">
+                        <div class="impact-item">
+                            <span class="impact-label">Deployment Time</span>
+                            <span class="impact-value">-50%</span>
+                        </div>
+                        <div class="impact-item">
+                            <span class="impact-label">Release Frequency</span>
+                            <span class="impact-value">+30%</span>
+                        </div>
+                        <div class="impact-item">
+                            <span class="impact-label">Error Rate</span>
+                            <span class="impact-value">-70%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-header">
+                    <div class="project-icon">
+                        <i class="fas fa-ship"></i>
+                    </div>
+                    <div class="project-title">
+                        <h3>Kubernetes Migration & Optimization</h3>
+                        <div class="project-tech">
+                            <span class="tech-badge">Kubernetes</span>
+                            <span class="tech-badge">EKS</span>
+                            <span class="tech-badge">Docker</span>
+                            <span class="tech-badge">Helm</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-description">
+                    <p>
+                        Orchestrated the migration of production workloads from AWS Elastic Beanstalk to Amazon EKS, 
+                        implementing container orchestration best practices and ensuring zero-downtime deployments.
+                    </p>
+                    <div class="project-highlights">
+                        <h4>Technical Implementation:</h4>
+                        <ul>
+                            <li>Containerized legacy applications using Docker</li>
+                            <li>Set up EKS clusters with proper networking and security</li>
+                            <li>Implemented Helm charts for application deployment</li>
+                            <li>Configured auto-scaling and resource optimization</li>
+                        </ul>
+                    </div>
+                    <div class="project-impact">
+                        <div class="impact-item">
+                            <span class="impact-label">Downtime</span>
+                            <span class="impact-value">0 minutes</span>
+                        </div>
+                        <div class="impact-item">
+                            <span class="impact-label">Scalability</span>
+                            <span class="impact-value">+200%</span>
+                        </div>
+                        <div class="impact-item">
+                            <span class="impact-label">Resource Efficiency</span>
+                            <span class="impact-value">+40%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-header">
+                    <div class="project-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="project-title">
+                        <h3>Cost Optimization Automation</h3>
+                        <div class="project-tech">
+                            <span class="tech-badge">Python</span>
+                            <span class="tech-badge">AWS Lambda</span>
+                            <span class="tech-badge">CloudWatch</span>
+                            <span class="tech-badge">EC2</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-description">
+                    <p>
+                        Developed an intelligent cost optimization solution using Python and AWS Lambda to automatically 
+                        manage non-production server lifecycles, implementing scheduled start/stop functionality.
+                    </p>
+                    <div class="project-highlights">
+                        <h4>Solution Components:</h4>
+                        <ul>
+                            <li>Lambda-based automation scripts in Python</li>
+                            <li>CloudWatch Events for scheduling</li>
+                            <li>Smart instance tagging and identification</li>
+                            <li>Cost monitoring and reporting dashboard</li>
+                        </ul>
+                    </div>
+                    <div class="project-impact">
+                        <div class="impact-item">
+                            <span class="impact-label">Cost Savings</span>
+                            <span class="impact-value">-30%</span>
+                        </div>
+                        <div class="impact-item">
+                            <span class="impact-label">Manual Effort</span>
+                            <span class="impact-value">-90%</span>
+                        </div>
+                        <div class="impact-item">
+                            <span class="impact-label">ROI</span>
+                            <span class="impact-value">$50K/year</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="project-technologies">
+    <div class="container">
+        <h2>Technologies Mastered Through Projects</h2>
+        <div class="tech-cloud">
+            <span class="tech-item large">Terraform</span>
+            <span class="tech-item medium">Kubernetes</span>
+            <span class="tech-item large">AWS</span>
+            <span class="tech-item small">Docker</span>
+            <span class="tech-item medium">Python</span>
+            <span class="tech-item small">Terragrunt</span>
+            <span class="tech-item medium">Azure</span>
+            <span class="tech-item small">Lambda</span>
+            <span class="tech-item large">CI/CD</span>
+            <span class="tech-item medium">EKS</span>
+            <span class="tech-item small">Helm</span>
+            <span class="tech-item medium">CloudWatch</span>
+            <span class="tech-item small">GitLab</span>
+            <span class="tech-item medium">GitHub</span>
+        </div>
+    </div>
+</section>
+{% endblock %}

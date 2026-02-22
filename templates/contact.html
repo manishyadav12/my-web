@@ -1,0 +1,172 @@
+{% extends "base.html" %}
+
+{% block title %}Contact - Manish Yadav{% endblock %}
+
+{% block content %}
+<section class="page-header">
+    <div class="container">
+        <h1 class="page-title">Get In Touch</h1>
+        <p class="page-subtitle">Let's connect and explore opportunities together</p>
+    </div>
+</section>
+
+<section class="contact-content">
+    <div class="container">
+        <div class="contact-grid">
+            <div class="contact-info">
+                <h2>Contact Information</h2>
+                <p class="contact-intro">
+                    I'm always interested in new opportunities, collaborations, and connecting with fellow 
+                    tech professionals. Whether you have a project in mind, want to discuss DevOps strategies, 
+                    or just want to chat about cloud technologies, I'd love to hear from you!
+                </p>
+                
+                <div class="contact-methods">
+                    <div class="contact-method">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Email</h3>
+                            <a href="mailto:manish25102@gmail.com">manish25102@gmail.com</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-method">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Phone</h3>
+                            <a href="tel:+917376356606">+91 7376356606</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-method">
+                        <div class="contact-icon">
+                            <i class="fab fa-linkedin"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>LinkedIn</h3>
+                            <a href="https://linkedin.com/in/manishyadav12" target="_blank">linkedin.com/in/manishyadav12</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-method">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Location</h3>
+                            <p>Bangalore, India</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="contact-form-section">
+                <h2>Send a Message</h2>
+                <form class="contact-form" action="#" method="POST">
+                    <div class="form-group">
+                        <label for="name" class="form-label">Name</label>
+                        <input type="text" id="name" name="name" class="form-input" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" id="email" name="email" class="form-input" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="subject" class="form-label">Subject</label>
+                        <select id="subject" name="subject" class="form-select" required>
+                            <option value="">Select a subject...</option>
+                            <option value="job-opportunity">Job Opportunity</option>
+                            <option value="collaboration">Collaboration</option>
+                            <option value="consultation">Technical Consultation</option>
+                            <option value="question">Question</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message" class="form-label">Message</label>
+                        <textarea id="message" name="message" class="form-textarea" rows="6" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-paper-plane"></i> Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="availability">
+    <div class="container">
+        <div class="availability-card">
+            <div class="availability-content">
+                <h2>Current Status</h2>
+                <div class="status-indicator">
+                    <div class="status-dot available"></div>
+                    <span class="status-text">Open to Opportunities</span>
+                </div>
+                <p>
+                    I'm currently working as a DevOps Engineer at CSG International and am open to discussing 
+                    new opportunities, freelance projects, and technical consultations. I'm particularly interested 
+                    in cloud architecture, DevOps transformation, and infrastructure optimization projects.
+                </p>
+                <div class="interest-areas">
+                    <h4>Areas of Interest:</h4>
+                    <div class="interest-tags">
+                        <span class="interest-tag">Cloud Migration</span>
+                        <span class="interest-tag">DevOps Consulting</span>
+                        <span class="interest-tag">Infrastructure Automation</span>
+                        <span class="interest-tag">Cost Optimization</span>
+                        <span class="interest-tag">Kubernetes Implementation</span>
+                        <span class="interest-tag">CI/CD Design</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="social-links">
+    <div class="container">
+        <h2>Connect With Me</h2>
+        <div class="social-grid">
+            <a href="https://linkedin.com/in/manishyadav12" target="_blank" class="social-card">
+                <div class="social-icon">
+                    <i class="fab fa-linkedin"></i>
+                </div>
+                <div class="social-content">
+                    <h3>LinkedIn</h3>
+                    <p>Professional network and career updates</p>
+                </div>
+            </a>
+            
+            <a href="https://github.com/manishyadav" target="_blank" class="social-card">
+                <div class="social-icon">
+                    <i class="fab fa-github"></i>
+                </div>
+                <div class="social-content">
+                    <h3>GitHub</h3>
+                    <p>Code repositories and open source contributions</p>
+                </div>
+            </a>
+            
+            <a href="mailto:manish25102@gmail.com" class="social-card">
+                <div class="social-icon">
+                    <i class="fas fa-envelope"></i>
+                </div>
+                <div class="social-content">
+                    <h3>Email</h3>
+                    <p>Direct communication for opportunities</p>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
+{% endblock %}
