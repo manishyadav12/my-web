@@ -3,7 +3,7 @@ services:
     name: portfolio-website
     env: python
     buildCommand: "pip install -r requirements.txt"
-    startCommand: "gunicorn app:app -c gunicorn.conf.py"
+    startCommand: "gunicorn app:app --bind 0.0.0.0:$PORT --workers 1 --timeout 120 --access-logfile - --error-logfile -"
     envVars:
       - key: PYTHON_VERSION
         value: 3.10.12

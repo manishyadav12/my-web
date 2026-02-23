@@ -1,0 +1,37 @@
+# Local development
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+.env
+.venv
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Documentation (deploy guides not needed in production)
+RAILWAY_DEPLOY.md
+README.md
+render.yaml
+
+# Local database
+*.db
+portfolio.db
+
+# Logs
+*.log
+logs/

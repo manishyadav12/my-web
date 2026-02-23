@@ -6,7 +6,11 @@ import secrets
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY', secrets.token_hex(32))
-app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL', 'sqlite:///portfolio.db')
+# Handle Railway PostgreSQL URL format
+database_url = os.environ.get('DATABASE_URL', 'sqlite:///portfolio.db')
+if database_url and database_url.startswith('postgres://'):
+    database_url = database_url.replace('postgres://', 'postgresql://', 1)
+app.config['SQLALCHEMY_DATABASE_URI'] = database_url
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['SERVER_NAME'] = os.environ.get('SERVER_NAME', None)
 app.config['PREFERRED_URL_SCHEME'] = os.environ.get('PREFERRED_URL_SCHEME', 'https')
@@ -106,13 +110,21 @@ def blog_post(post_id):
 def contact():
     return render_template('contact.html')
 
+@app.route('/health')
+def health_check():
+    """Health check endpoint for deployment platforms"""
+    return {"status": "healthy", "message": "Portfolio website is running"}, 200
+
 def create_tables():
     """Create database tables if they don't exist"""
     try:
         with app.app_context():
             db.create_all()
+            print("✅ Database tables created successfully")
     except Exception as e:
-        print(f"Error creating database tables: {e}")
+        print(f"❌ Error creating database tables: {e}")
+        # Don't fail startup if database creation fails
+        pass
 
 if __name__ == '__main__':
     create_tables()
@@ -120,8 +132,8 @@ if __name__ == '__main__':
     debug_mode = os.environ.get('FLASK_DEBUG', 'True').lower() == 'true'
     port = int(os.environ.get('PORT', 8000))
     
-    # Check if running on Render or other cloud platform
-    is_production = os.environ.get('RENDER') or os.environ.get('PORT')
+    # Check if running on Railway, Render or other cloud platform
+    is_production = os.environ.get('RAILWAY_ENVIRONMENT') or os.environ.get('RENDER') or os.environ.get('PORT')
     
     if not is_production:
         print("🌐 Portfolio website starting...")
